@@ -1,0 +1,121 @@
+.header {
+	height: 100vh;
+	position: relative;
+	background-color: #c4c4c4;
+	color: #fff;
+	background-image: url('../img/slides/moscow-city.webp');
+	a {
+		color: #fff;
+	}
+	// .header__content
+	&__content {
+		position: absolute;
+		z-index: 9;
+		top: 50px;
+		left: 70px;
+		right: 70px;
+		bottom: 80px;
+		pointer-events: none;
+
+		background-color: rgba(#999, 0.6);
+
+		@media (max-width: 1200px) {
+			top: 40px;
+			left: 40px;
+			right: 40px;
+			bottom: 60px;
+		}
+		@media (max-width: 767px) {
+			top: 30px;
+			left: 5%;
+			right: 5%;
+			bottom: 30px;
+		}
+	}
+
+	// .header__nav
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		pointer-events: all;
+		// .nav__logo
+		&__logo {
+			display: flex;
+			align-items: center;
+			column-gap: 5px;
+			fill: #fff;
+			cursor: pointer;
+			strong {
+				font-family: 'Roboto';
+				text-transform: uppercase;
+				font-size: rem(28);
+				// line-height: 0.8;
+			}
+			svg {
+				border-radius: 50%;
+			}
+		}
+
+		// .nav__list
+		&__list {
+			ul {
+				display: flex;
+				column-gap: 65px;
+				li {
+					color: #fff;
+					font-family: 'Montserrat';
+					font-size: rem(18);
+					font-weight: 600;
+					text-transform: uppercase;
+					a {
+						position: relative;
+						&::before {
+							content: '';
+							position: absolute;
+							width: 100%;
+							height: 1px;
+							background-color: #fff;
+							bottom: -4px;
+							left: 0;
+							transform-origin: right;
+							transform: scaleX(0);
+							transition: transform 0.3s ease-in-out;
+						}
+						&:hover::before {
+							transform-origin: left;
+							transform: scaleX(1);
+						}
+					}
+				}
+			}
+
+			@media (max-width: 1200px) {
+				display: none;
+			}
+		}
+		// .nav__mobile
+		&__mobile {
+		}
+		// .nav__btn
+		&__btn {
+		}
+		// .nav__btn-img
+		&__btn-img {
+		}
+	}
+
+	// .header__socials
+	&__socials {
+	}
+	// .header__see-more
+	&__see-more {
+	}
+	// .header__slider-controls
+	&__slider-controls {
+	}
+	// .header__scrollbar
+	&__scrollbar {
+	}
+}

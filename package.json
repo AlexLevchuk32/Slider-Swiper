@@ -1,0 +1,34 @@
+{
+	"name": "Slider Swiper",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "gulp",
+		"build": "gulp build",
+		"fonts": "gulp fonts",
+		"img": "gulp img"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "latest",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-clean": "latest",
+		"gulp-concat": "latest",
+		"gulp-file-include": "latest",
+		"gulp-fonter": "latest",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-newer": "latest",
+		"gulp-replace": "^1.1.4",
+		"gulp-sass": "latest",
+		"gulp-ttf2woff2": "latest",
+		"gulp-webp": "latest",
+		"sass": "latest",
+		"webpack": "latest",
+		"webpack-stream": "latest"
+	}
+}

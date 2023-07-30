@@ -1,0 +1,114 @@
+// Обнуление стилей
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 0;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+nav,
+header,
+main,
+section,
+footer,
+aside {
+	display: block;
+}
+
+// html,
+body {
+	margin: 0px;
+	// height: 100%;
+	// width: 100%;
+}
+
+button,
+input,
+textarea {
+	-webkit-appearance: none;
+	appearance: none;
+	vertical-align: middle;
+	color: inherit;
+	font-family: inherit;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	text-align: inherit;
+	text-transform: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	cursor: pointer;
+}
+
+button:disabled,
+[type='button']:disabled,
+[type='reset']:disabled,
+[type='submit']:disabled {
+	cursor: default;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+svg,
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0;
+}
+// Обнуление стилей
