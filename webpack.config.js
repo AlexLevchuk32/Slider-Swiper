@@ -14,7 +14,14 @@ const config = {
 		filename: '[name].min.js',
 	},
 	watch: true,
-	module: {},
+	module: {
+		// rules: [
+		// 	{
+		// 		test: /\.css$/,
+		// 		use: ['style-loader', 'css-loader'],
+		// 	},
+		// ],
+	},
 };
 
 module.exports = config;

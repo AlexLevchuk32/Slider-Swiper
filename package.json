@@ -30,5 +30,8 @@
 		"sass": "latest",
 		"webpack": "latest",
 		"webpack-stream": "latest"
+	},
+	"dependencies": {
+		"swiper": "^10.1.0"
 	}
 }
