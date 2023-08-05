@@ -4,6 +4,9 @@
 	background-color: #c4c4c4;
 	color: #fff;
 	background-image: url('../img/slides/moscow-city.webp');
+	background-position: center bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
 	a {
 		color: #fff;
 	}
@@ -17,7 +20,7 @@
 		bottom: 80px;
 		pointer-events: none;
 
-		background-color: rgba(#999, 0.6);
+		background-color: rgba(#999, 0.3);
 
 		@media (max-width: 1200px) {
 			top: 40px;
@@ -38,7 +41,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 30px;
+		column-gap: 30px;
 		pointer-events: all;
 		// .nav__logo
 		&__logo {
@@ -68,7 +71,7 @@
 					font-family: 'Montserrat';
 					font-size: rem(18);
 					font-weight: 600;
-					text-transform: uppercase;
+					// text-transform: uppercase;
 					a {
 						position: relative;
 						&::before {
@@ -108,14 +111,83 @@
 
 	// .header__socials
 	&__socials {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(0%, -50%);
+		pointer-events: all;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+
+		@media (max-hight: 600px) {
+			top: 40%;
+		}
+
+		.socials-icons {
+			display: flex;
+			flex-direction: column;
+			row-gap: 24px;
+			align-items: center;
+			pointer-events: all;
+		}
 	}
+	// .header__socials-icons
+
 	// .header__see-more
 	&__see-more {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		pointer-events: all;
+
+		.see-more {
+			position: relative;
+			padding-left: 60px;
+			display: block;
+			font-family: 'Montserrat';
+			font-size: rem(14);
+			font-weight: 600;
+			color: rgba(#fff, 0.6);
+			transform: rotate(-90deg) translate(0%, 100%);
+			// transform: rotate(-90deg);
+			transform-origin: left bottom;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: calc(50% - 1.5px);
+				width: 38px;
+				height: 3px;
+				background-color: #fff;
+				opacity: 0.3;
+			}
+		}
 	}
+
 	// .header__slider-controls
 	&__slider-controls {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		pointer-events: all;
+
+		background-color: #878787;
+		height: 60px;
+		width: 80px;
 	}
+
 	// .header__scrollbar
 	&__scrollbar {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(0%, -50%);
+		pointer-events: all;
+
+		background-color: #878787;
+		width: 10px;
+		height: 400px;
 	}
 }
