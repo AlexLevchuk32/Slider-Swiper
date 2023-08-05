@@ -33,7 +33,7 @@
 
 		background-color: #555;
 		background: var(--radial-bg), var(--linear-bg),
-			url('../img/slides/krasnaya-ploshhad.webp');
+			url('../../img/slides/moscow-city.webp');
 		background-position: center center; // x - y
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -63,6 +63,7 @@
 			position: relative;
 			text-align: center;
 		}
+
 		// .slide__subtitle
 		&__subtitle {
 			position: absolute;
@@ -79,6 +80,7 @@
 				font-size: 3vw;
 			}
 		}
+
 		// .slide__title
 		&__title {
 			color: #fff;
@@ -144,15 +146,18 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(#fff, 0.1);
+			background: rgba(#fff, 0.3);
 			border-radius: 5px;
 			filter: blur(3px);
+			opacity: 0.6;
 			transition: all 0.3s ease-in;
 		}
 		&:hover::before {
-			opacity: 0.8;
 			filter: blur(10px);
+			opacity: 0.8;
+			background: rgba(#fff, 0.4);
 		}
+
 		// .location__title
 		&__title {
 			color: #fff;
@@ -165,13 +170,14 @@
 				font-size: rem(18);
 			}
 		}
+
 		// .location__link
 		&__link {
 			color: #fff;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: 1.25;
-			opacity: 0.4;
+			// opacity: 0.4;
 		}
 	}
 
@@ -215,14 +221,23 @@
 			column-gap: 5px;
 			fill: #fff;
 			cursor: pointer;
-			strong {
+			svg {
+				border-radius: 50%;
+			}
+		}
+		&__title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			strong:nth-child(1n) {
 				font-family: 'Roboto';
 				text-transform: uppercase;
 				font-size: rem(28);
-				// line-height: 0.8;
 			}
-			svg {
-				border-radius: 50%;
+			strong:nth-child(2n) {
+				font-family: 'Roboto';
+				text-transform: uppercase;
+				font-size: rem(18);
 			}
 		}
 
@@ -360,6 +375,7 @@
 					opacity: 1;
 				}
 			}
+
 			// .slider-controls__count
 			&__count {
 				display: flex;
@@ -373,6 +389,7 @@
 				line-height: 1;
 				text-align: right;
 			}
+
 			// .slider-controls__count-current
 			&__count-current,
 			.swiper-pagination-current {
@@ -380,6 +397,7 @@
 				line-height: 0.75;
 				color: #fff;
 			}
+
 			// .slider-controls__count-total
 			&__count-total {
 			}
@@ -390,12 +408,24 @@
 	&__scrollbar {
 		position: absolute;
 		right: 0;
-		top: 50%;
-		transform: translate(0%, -50%);
+		top: 45%;
+		width: 400px;
+		height: 10px;
+
 		pointer-events: all;
 
-		background-color: #878787;
-		width: 10px;
-		height: 400px;
+		transform: rotate(90deg) translate(50%, 0%);
+		transform-origin: right top;
+
+		.swiper-scrollbar {
+			height: 2px !important;
+			border-radius: 0 !important;
+			background-color: rgba(#fff, 0.3) !important;
+		}
+
+		.swiper-scrollbar-drag {
+			border-radius: 0 !important;
+			background-color: #fff !important;
+		}
 	}
 }
