@@ -3,7 +3,8 @@
 	@font-face {
 		font-family: $font_name;
 		font-display: swap;
-		src: url('../fonts/#{$file_name}.woff2') format('woff2'), url('../fonts/#{$file_name}.woff') format('woff');
+		src: url('../fonts/#{$file_name}.woff2') format('woff2'),
+			url('../fonts/#{$file_name}.woff') format('woff');
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
@@ -40,7 +41,14 @@
 }
 
 // Адаптивное свойство (clamp)
-@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
+@mixin adaptiveValue(
+	$property,
+	$startSize,
+	$minSize,
+	$widthFrom: $containerWidth,
+	$widthTo: $minWidth,
+	$keepSize: 0
+) {
 	@if ($startSize==0) {
 		$startSize: 0.0001;
 	}
@@ -78,11 +86,24 @@
 	}
 	// Если не поддерживается clamp();
 	@supports not (#{$property}: $propertyValue) {
-		#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		#{$property}: calc(
+			#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div(
+					$widthFrom,
+					16
+				) - math.div($widthTo, 16)}
+		);
 	}
 
 	// Устанавливаем значения по умолчанию
-	@if $widthFrom != $containerWidth and $widthFrom != $maxWidth and $keepSize != 1 and $keepSize != 2 {
+	@if $widthFrom !=
+		$containerWidth and
+		$widthFrom !=
+		$maxWidth and
+		$keepSize !=
+		1 and
+		$keepSize !=
+		2
+	{
 		@media (min-width: $widthFromMedia) {
 			#{$property}: inherit;
 		}
@@ -92,4 +113,18 @@
 			#{$property}: inherit;
 		}
 	}
+}
+
+// Значения для фона слайда
+@mixin bg-img {
+	background-color: #555;
+	background-position: center center; // x - y
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+// Значения для градиента заголовков слайдов
+@mixin bg-clip-fill {
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

@@ -31,12 +31,40 @@
 		flex-direction: column;
 		justify-content: space-between;
 
-		background-color: #555;
-		background: var(--radial-bg), var(--linear-bg),
-			url('../../img/slides/moscow-city.webp');
-		background-position: center center; // x - y
-		background-size: cover;
-		background-repeat: no-repeat;
+		&--ploshhad {
+			background: var(--radial-bg), var(--linear-bg),
+				url('../img/slides/krasnaya-ploshhad.webp');
+			@include bg-img;
+		}
+
+		&--moscowcity {
+			background: var(--radial-bg), var(--linear-bg),
+				url('../img/slides/moscow-city.webp');
+			@include bg-img;
+		}
+
+		&--vdnh {
+			background: var(--radial-bg), var(--linear-bg), url('../img/slides/vdnh.webp');
+			@include bg-img;
+		}
+
+		&--bashnya {
+			background: var(--radial-bg), var(--linear-bg),
+				url('../img/slides/ostankinskya-bashnya.webp');
+			@include bg-img;
+		}
+
+		&--most {
+			background: var(--radial-bg), var(--linear-bg),
+				url('../img/slides/paryashhij-most.webp');
+			@include bg-img;
+		}
+
+		&--prudy {
+			background: var(--radial-bg), var(--linear-bg),
+				url('../img/slides/patriarshie-prudy.webp');
+			@include bg-img;
+		}
 
 		color: #fff;
 
@@ -86,7 +114,7 @@
 			color: #fff;
 			font-family: 'Montserrat';
 			// font-size: rem(150);
-			font-size: 10vw;
+			font-size: 8vw;
 			font-weight: 700;
 			line-height: 1.22;
 
@@ -98,9 +126,39 @@
 				padding: 0 10px;
 
 				background: linear-gradient(47.06deg, #000000 -3.87%, rgba(#fff, 0) 20.89%),
-					#ffffff;
-				background-clip: text;
-				-webkit-text-fill-color: transparent;
+					#fff;
+				@include bg-clip-fill;
+			}
+
+			&--ploshhad span {
+				background: linear-gradient(47.06deg, #e3500e -3.87%, rgba(#fff, 0) 20.89%),
+					#fff;
+				@include bg-clip-fill;
+			}
+			&--moscowcity span {
+				background: linear-gradient(47.06deg, #b76042 -3.87%, rgba(#fff, 0) 20.89%),
+					#fff;
+				@include bg-clip-fill;
+			}
+			&--vdnh span {
+				background: linear-gradient(47.06deg, #e3d3e4 -3.87%, rgba(#fff, 0) 20.89%),
+					#fff;
+				@include bg-clip-fill;
+			}
+			&--bashnya span {
+				background: linear-gradient(47.06deg, #f62c5e -3.87%, rgba(#fff, 0) 20.89%),
+					#fff;
+				@include bg-clip-fill;
+			}
+			&--most span {
+				background: linear-gradient(47.06deg, #ffe17b -3.87%, rgba(#fff, 0) 20.89%),
+					#fff;
+				@include bg-clip-fill;
+			}
+			&--prudy span {
+				background: linear-gradient(47.06deg, #efcb9b -3.87%, rgba(#fff, 0) 20.89%),
+					#fff;
+				@include bg-clip-fill;
 			}
 		}
 	}
@@ -155,7 +213,7 @@
 		&:hover::before {
 			filter: blur(10px);
 			opacity: 0.8;
-			background: rgba(#fff, 0.4);
+			background: rgba(#fff, 0.6);
 		}
 
 		// .location__title

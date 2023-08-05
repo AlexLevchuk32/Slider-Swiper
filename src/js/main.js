@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	loop: true,
 	parallax: true,
-	speed: 1000,
+	speed: 2000,
 	keyboard: {
 		enable: true,
 	},
