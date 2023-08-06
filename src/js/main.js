@@ -1,5 +1,7 @@
 import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
+import mobileNav from './modules/mobile-nav';
+
+mobileNav();
 
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
