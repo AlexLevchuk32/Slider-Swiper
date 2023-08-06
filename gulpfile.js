@@ -189,7 +189,7 @@ function building() {
 	return src(
 		[
 			'./src/css/style.min.css',
-			'./src/js/*.bundle.js',
+			'./src/js/*.min.js',
 			'./src/*.html',
 			// './src/**/*.html', // Забираем все html-файлы из папки src и вложенных каталогов
 			'./src/img/**/*',

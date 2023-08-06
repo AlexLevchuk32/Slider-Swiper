@@ -1,5 +1,4 @@
 function mobileNav() {
-	// Nav button
 	const navBtnOpen = document.querySelector('#modalOpen');
 	const navBtnClose = document.querySelector('#modalClose');
 
