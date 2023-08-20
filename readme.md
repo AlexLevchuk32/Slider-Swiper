@@ -1,4 +1,4 @@
-**Project:** Slider whit Swiper
+**Project:** Slider whith Swiper
 
 ---
 
